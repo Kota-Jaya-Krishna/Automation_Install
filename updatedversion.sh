@@ -36,7 +36,7 @@ do
     dpkg --get-selections $package >> $LOG_FILE_NAME 2>&1
     if [ $? -ne 0 ]
     then
-        dnf install $package -y >> $LOG_FILE_NAME 2>&1
+        apt install $package -y >> $LOG_FILE_NAME 2>&1
         VALIDATE $? "Installing $package"
     else
         echo -e "$package is already $Y ... INSTALLED $N"
