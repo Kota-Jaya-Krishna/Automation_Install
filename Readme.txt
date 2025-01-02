@@ -1,0 +1,1 @@
+# automateinstall.sh script is for UBUNTU server#
