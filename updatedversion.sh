@@ -33,7 +33,7 @@ fi
 
 for package in $@
 do
-    dpkg --get-selections $package >> $LOG_FILE_NAME 2>&1
+    dpkg --get-selections | grep $package >> $LOG_FILE_NAME 2>&1
     if [ $? -ne 0 ]
     then
         apt install $package -y >> $LOG_FILE_NAME 2>&1
