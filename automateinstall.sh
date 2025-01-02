@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt update -y
+
 USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
